@@ -26,15 +26,17 @@ grep -n "x11" /etc/services
 
 # Erwtima 4
 
-cd ~ | mkdir projects
+cd $HOME && mkdir projects
+cd projects
 touch house1 house2 house3 house4 house5 house6 house7 house8 house9
 mkdir houses
-mv house4 house8 $USER/projects/houses/
-cp house2 house7 $USER/projects/houses/
-cp -r /usr/share/doc/init* $USER/projects/
-cd $USER/projects/
-ls -R | ls -R > $HOME/projects-ls
-rm -f house2 house7 house9
+mv house4 house8 houses/
+cp house2 house7 houses/
+cp -r /usr/share/doc/init* $HOME/projects/
+cd $HOME/projects/
+ls -R && ls -R > $HOME/projects-ls
+cd $HOME/projects/ && rm -f house2 house7 house9
+
 
 # Erwtima 5
 
