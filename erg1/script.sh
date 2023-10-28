@@ -1,28 +1,28 @@
 # chmod +x script.sh
 
 # Erwtima 1
-cat /etc/passwd > passwd.out | cat /etc/group > group.out
+cat /etc/passwd > $HOME/passwd.out | cat /etc/group > $HOME/group.out
 
 ### Erwtima 2
-ls -la -lt > descending.out
-ls -la -ltr  > ascending.out
+ls -la -lt > $HOME/descending.out
+ls -la -ltr  > $HOME/ascending.out
 
 #  Erwtima 3
 
 ## Shows the contents of /etc/services in a list. Scrollable with Spacebar, Q to Quit.
-less /etc/services
+less /etc/services > $HOME/services_list.out
 
 ## Shows how many lines the file /etc/services contains.
-wc -l /etc/services
+wc -l /etc/services > $HOME/services_lines.out
 
 ## Shows the first 20 lines from the file /etc/services.
-head -n 20 /etc/services
+head -n 20 /etc/services > $HOME/services_first.out
 
 ## Shows the last 20 lines from the file /etc/services.
-tail -n 20 /etc/services
+tail -n 20 /etc/services > $HOME/services_last.out
 
 ## Shows the lines that contain the character "x11".
-grep -n "x11" /etc/services
+grep -n "x11" /etc/services > $HOME/services_x11.out
 
 # Erwtima 4
 
@@ -58,7 +58,7 @@ mv $HOME/projects/house3_temp $HOME/projects/house3
 rm -rf $HOME/projects/house3_temp
 
 ## Compare differences of house1 and house3
-diff $HOME/projects/house1 $HOME/projects/house3
+diff $HOME/projects/house1 $HOME/projects/house3 > $HOME/diff_house1_house3.out
 
 ### Erwtima 7
-find /usr/share/doc -type f -mtime +300
+find /usr/share/doc -type f -mtime +300 > $HOME/last_modified_300days.out
