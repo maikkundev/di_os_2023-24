@@ -50,6 +50,7 @@ chmod -R g-w $HOME/projects
 
 ## Modify house1 file so that it contains 3 lines
 echo -e "line1\nline2\nline3" > $HOME/projects/house1
+echo -e "line5\nline6\nline7" > $HOME/projects/house3
 
 ## Modify house3 file so that it contains 3 lines with the first line matching the first line of house1
 head -n 1 $HOME/projects/house1 | cat - $HOME/projects/house3 > $HOME/projects/house3_temp
