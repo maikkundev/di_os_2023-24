@@ -1,1 +1,1 @@
-cd $USER | cat /etc/passwd > passwd.out | cat /etc/group > group.out
+cd etc | cp passwd passwd.out | cp group group.out
