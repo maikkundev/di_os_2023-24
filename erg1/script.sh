@@ -56,3 +56,6 @@ rm -rf $HOME/projects/house3_temp
 
 ## Compare differences of house1 and house3
 diff $HOME/projects/house1 $HOME/projects/house3
+
+### Erwtima 7
+find /usr/share/doc -type f -mtime +300
