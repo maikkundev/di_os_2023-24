@@ -1,1 +1,0 @@
-cd /etc && cp passwd passwd.out && cp group group.out
