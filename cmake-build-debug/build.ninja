@@ -61,15 +61,15 @@ build CMakeFiles/di_os_2023_24.dir/erg2/main.c.o: C_COMPILER__di_os_2023_24_unsc
 
 
 #############################################
-# Link the executable di_os_2023_24
+# Link the executable /Users/lost/Projects/di_os_2023-24/erg2/mycp
 
-build di_os_2023_24: C_EXECUTABLE_LINKER__di_os_2023_24_Debug CMakeFiles/di_os_2023_24.dir/erg2/main.c.o
+build /Users/lost/Projects/di_os_2023-24/erg2/mycp: C_EXECUTABLE_LINKER__di_os_2023_24_Debug CMakeFiles/di_os_2023_24.dir/erg2/main.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/di_os_2023_24.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = di_os_2023_24
-  TARGET_PDB = di_os_2023_24.dbg
+  TARGET_FILE = /Users/lost/Projects/di_os_2023-24/erg2/mycp
+  TARGET_PDB = mycp.dbg
 
 
 #############################################
@@ -97,6 +97,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build di_os_2023_24: phony /Users/lost/Projects/di_os_2023-24/erg2/mycp
+
+build mycp: phony /Users/lost/Projects/di_os_2023-24/erg2/mycp
+
 # =============================================================================
 # Folder targets.
 
@@ -105,7 +109,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/lost/Projects/di_os_2023-24/cmake-build-debug
 
-build all: phony di_os_2023_24
+build all: phony /Users/lost/Projects/di_os_2023-24/erg2/mycp
 
 # =============================================================================
 # Built-in targets

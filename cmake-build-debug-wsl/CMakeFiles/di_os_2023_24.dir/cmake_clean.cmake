@@ -1,13 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/di_os_2023_24.dir/erg2/main.c.o"
   "CMakeFiles/di_os_2023_24.dir/erg2/main.c.o.d"
-<<<<<<< HEAD
-  "mycp"
-  "mycp.pdb"
-=======
-  "erg2/mycp"
-  "erg2/mycp.pdb"
->>>>>>> origin
+  "di_os_2023_24"
+  "di_os_2023_24.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
