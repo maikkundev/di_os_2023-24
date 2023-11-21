@@ -1,0 +1,3 @@
+/home/mrk/DevLinux/di_os_2023-24/CMakeFiles/di_os_2023_24.dir
+/home/mrk/DevLinux/di_os_2023-24/CMakeFiles/edit_cache.dir
+/home/mrk/DevLinux/di_os_2023-24/CMakeFiles/rebuild_cache.dir
