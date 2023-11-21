@@ -1,3 +1,0 @@
-/Users/lost/Projects/di_os_2023-24/cmake-build-debug/CMakeFiles/di_os_2023_24.dir
-/Users/lost/Projects/di_os_2023-24/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/lost/Projects/di_os_2023-24/cmake-build-debug/CMakeFiles/rebuild_cache.dir

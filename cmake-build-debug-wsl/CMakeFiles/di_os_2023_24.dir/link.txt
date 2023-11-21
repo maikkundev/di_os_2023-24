@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/di_os_2023_24.dir/erg2/main.c.o -o di_os_2023_24 
