@@ -1,0 +1,1 @@
+void mycp(char *file1, char *file2, int bufferSize);

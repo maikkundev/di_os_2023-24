@@ -1,33 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
+#include <string.h>
 
-int main (int argc, char *argv[]) {
-    char buf;
-    int fd1, fd2;
+#include "mycp.h"
 
-    if (argc != 3) {
-        printf("Usage: %s <source> <destination>\n", argv[0]);
-        exit(1);
+int main(int argc, char *argv[]) {
+    if (argc != 4 && argc != 6) {
+        fprintf(stderr, "Usage: %s [-b<BufferSize>] <file1> <file2>\n", argv[0]);
+        return 1;
     }
 
-    if ((fd1 = open(argv[1], O_RDONLY)) == -1) {
-        perror(argv[1]);
-        exit(2);
+    // Process optional buffer size
+    int bufferSize = 4096; // Default buffer size
+
+    if (argc == 6 && strncmp(argv[1], "-b", 2) == 0) {
+        bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
+        if (bufferSize <= 0) {
+            fprintf(stderr, "Invalid buffer size\n");
+            return 1;
+        }
     }
 
-    if ((fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644)) == -1) {
-        perror(argv[2]);
-        exit(3);
-    }
+    // Get file names
+    char *file1 = argv[argc - 2];
+    char *file2 = argv[argc - 1];
 
-    while (read(fd1, &buf, 1) > 0) {
-        write(fd2, &buf, 1);
-    }
-
-    close(fd1);
-    close(fd2);
+    // Call the mycp function
+    mycp(file1, file2, bufferSize);
 
     return 0;
 }
