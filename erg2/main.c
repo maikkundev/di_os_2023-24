@@ -4,9 +4,6 @@
 #include <unistd.h>
 
 int main (int argc, char *argv[]) {
-<<<<<<< Updated upstream
-    printf("Hello world!");
-=======
     char buf;
     int fd1, fd2;
 
@@ -32,7 +29,5 @@ int main (int argc, char *argv[]) {
     close(fd1);
     close(fd2);
 
-
->>>>>>> Stashed changes
     return 0;
 }
