@@ -60,6 +60,7 @@ dkms.conf
 /.cmake
 /CMakeCache.txt
 /out/
+/build
 
 
 #IDEs

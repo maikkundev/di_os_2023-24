@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "mycp.h"
 
 void mycp(char *file1, char *file2, int bufferSize) {
@@ -40,6 +41,9 @@ void mycp(char *file1, char *file2, int bufferSize) {
     // Close the files
     fclose(source);
     fclose(destination);
+
+    // Force write to disk
+    sync();
 
     // Free the buffer
     free(buffer);

@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
     // Process optional buffer size
     int bufferSize = 4096; // Default buffer size
 
-
     if (argc == 4 && strncmp(argv[1], "-b", 2) == 0) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
         if (bufferSize <= 0) {
@@ -32,7 +31,6 @@ int main(int argc, char *argv[]) {
 
     // Call the mycp function
     mycp(file1, file2, bufferSize);
-
 
     printf("Time taken: %f\n", ((double) clock() - (double) start) / CLOCKS_PER_SEC);
     return 0;
