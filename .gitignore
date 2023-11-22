@@ -64,6 +64,9 @@ dkms.conf
 /cmake_install.cmake
 /Makefile
 
+# Project Specific
+/input
+/output
 
 #IDEs
 /.idea
