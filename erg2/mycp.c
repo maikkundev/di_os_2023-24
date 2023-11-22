@@ -48,5 +48,5 @@ void mycp(char *file1, char *file2, int bufferSize) {
     // Free the buffer
     free(buffer);
 
-    printf("File copied successfully.\n");
+    printf("File copied successfully (%d).\n", bufferSize);
 }
