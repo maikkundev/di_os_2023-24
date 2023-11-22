@@ -1,0 +1,90 @@
+Script started on Wed Nov 22 18:15:16 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                ]2;lost@Thans-Macbook:~/Projects/di_os_2023-24]1;..di_os_2023-24[0m[27m[24m[J
+[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [?][0m[31m[39m[1m[0m[0m[39m[1m [0m
+[1m[0m[1m[32m➜ [0m[32m[39m[1m[0m[K[?1h=[?2004hscript scriptfile[17Dclear            [12D/bin/bash ./script.sh[?1l>[?2004l
+]2;/bin/bash ./script.sh]1;/bin/bash-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/lost/Projects/di_os_2023-24
+[100%] Built target di_os_2023_24
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022740 secs (737784345 bytes/sec)
+
+real	0m0.074s
+user	0m0.002s
+sys	0m0.062s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022607 secs (742124829 bytes/sec)
+
+real	0m0.160s
+user	0m0.091s
+sys	0m0.063s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022961 secs (730683158 bytes/sec)
+
+real	0m0.114s
+user	0m0.047s
+sys	0m0.062s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022277 secs (753118283 bytes/sec)
+
+real	0m0.093s
+user	0m0.025s
+sys	0m0.064s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.023137 secs (725124951 bytes/sec)
+
+real	0m0.078s
+user	0m0.013s
+sys	0m0.061s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022808 secs (735584707 bytes/sec)
+
+real	0m0.075s
+user	0m0.007s
+sys	0m0.062s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022544 secs (744198722 bytes/sec)
+
+real	0m0.072s
+user	0m0.003s
+sys	0m0.063s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.023053 secs (727767145 bytes/sec)
+
+real	0m0.074s
+user	0m0.003s
+sys	0m0.066s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.023072 secs (727167822 bytes/sec)
+
+real	0m0.070s
+user	0m0.002s
+sys	0m0.062s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022558 secs (743736856 bytes/sec)
+
+real	0m0.054s
+user	0m0.001s
+sys	0m0.047s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022679 secs (739768773 bytes/sec)
+
+real	0m0.051s
+user	0m0.001s
+sys	0m0.045s
+[1m[7m%[27m[1m[0m                                                                                                                                                                ]2;lost@Thans-Macbook:~/Projects/di_os_2023-24]1;..di_os_2023-24[0m[27m[24m[J
+[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [?][0m[31m[39m[1m[0m[0m[39m[1m [0m
+[1m[0m[1m[32m➜ [0m[32m[39m[1m[0m[K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on Wed Nov 22 18:15:21 2023
