@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "mycp.h"
 
 int main(int argc, char *argv[]) {
-    if (argc != 4 && argc != 6) {
+    clock_t start;
+
+    start = clock();
+    if (argc < 3 || argc > 4) {
         fprintf(stderr, "Usage: %s [-b<BufferSize>] <file1> <file2>\n", argv[0]);
         exit(1);
     }
@@ -13,7 +17,8 @@ int main(int argc, char *argv[]) {
     // Process optional buffer size
     int bufferSize = 4096; // Default buffer size
 
-    if (argc == 6 && strncmp(argv[1], "-b", 2) == 0) {
+
+    if (argc == 4 && strncmp(argv[1], "-b", 2) == 0) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
         if (bufferSize <= 0) {
             fprintf(stderr, "Invalid buffer size\n");
@@ -28,5 +33,7 @@ int main(int argc, char *argv[]) {
     // Call the mycp function
     mycp(file1, file2, bufferSize);
 
+
+    printf("Time taken: %f\n", ((double) clock() - (double) start) / CLOCKS_PER_SEC);
     return 0;
 }

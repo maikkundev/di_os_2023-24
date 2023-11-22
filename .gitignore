@@ -59,6 +59,7 @@ dkms.conf
 /Testing
 /.cmake
 /CMakeCache.txt
+/out/
 
 
 #IDEs
