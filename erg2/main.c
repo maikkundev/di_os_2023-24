@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
     if (argc != 4 && argc != 6) {
         fprintf(stderr, "Usage: %s [-b<BufferSize>] <file1> <file2>\n", argv[0]);
-        return 1;
+        exit(1);
     }
 
     // Process optional buffer size
@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
         if (bufferSize <= 0) {
             fprintf(stderr, "Invalid buffer size\n");
-            return 1;
+            exit(1);
         }
     }
 

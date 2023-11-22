@@ -9,4 +9,4 @@ add_executable(di_os_2023_24
         erg2/mycp.h)
 
 set_target_properties(di_os_2023_24 PROPERTIES OUTPUT_NAME "mycp"
-                        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/erg2)
+                        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/out)
