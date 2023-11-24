@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 
     start = clock();
     if (argc < 3 || argc > 4) {
-        fprintf(stderr, "Usage: %s [-b<BufferSize>] <file1> <file2>\n", argv[0]);
+        fprintf(stderr, "Usage: %s [-bBufferSize] <sourceFile> <destinationFile> (501)\n", argv[0]);
         // Exit with error code 501: Wrong number of arguments
         exit(501);
     }
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     if (argc == 4 && strncmp(argv[1], "-b", 2) == 0) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
         if (bufferSize <= 0) {
-            fprintf(stderr, "Invalid buffer size\n");
+            fprintf(stderr, "Invalid buffer size (502)\n");
             // Exit with error code 502: Invalid buffer size
             exit(502);
         }
