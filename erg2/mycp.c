@@ -12,7 +12,8 @@ void mycp(char *file1, char *file2, int bufferSize) {
     buffer = (char *)malloc(bufferSize);
     if (buffer == NULL) {
         perror("Error allocating buffer");
-        exit(EXIT_FAILURE);
+        // Exit with error code 505: Error allocating buffer
+        exit(505);
     }
 
     // Open the source file for reading
@@ -20,7 +21,8 @@ void mycp(char *file1, char *file2, int bufferSize) {
     if (source == NULL) {
         perror("Error opening source file");
         free(buffer);
-        exit(EXIT_FAILURE);
+        // Exit with error code 510: Error opening source file
+        exit(510);
     }
 
     // Open the destination file for writing
@@ -29,7 +31,8 @@ void mycp(char *file1, char *file2, int bufferSize) {
         perror("Error opening destination file");
         fclose(source);
         free(buffer);
-        exit(EXIT_FAILURE);
+        // Exit with error code 511: Error opening destination file
+        exit(511);
     }
 
     // Copy the contents of the source file to the destination file
