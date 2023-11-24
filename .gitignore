@@ -67,6 +67,7 @@ dkms.conf
 # Project Specific
 /input
 /output
+/lab
 
 #IDEs
 /.idea
