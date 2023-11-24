@@ -4,6 +4,8 @@
 #include <time.h>
 #include "mycp.h"
 
+#define DEFAULT_BUFFER_SIZE 4096
+
 int main(int argc, char *argv[]) {
     clock_t start;
 
@@ -15,7 +17,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Process optional buffer size
-    int bufferSize = 4096; // Default buffer size
+    int bufferSize = DEFAULT_BUFFER_SIZE; // Default buffer size
 
     if (argc == 4 && strncmp(argv[1], "-b", 2) == 0) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
