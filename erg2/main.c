@@ -10,6 +10,7 @@
 int main(int argc, char *argv[]) {
     clock_t start;
 
+    // Start a clock to measure the time taken
     start = clock();
     if (argc < 3 || argc > 4) {
         fprintf(stderr, "Usage: %s [-bBufferSize] <sourceFile> <destinationFile> (501)\n", argv[0]);
@@ -20,6 +21,7 @@ int main(int argc, char *argv[]) {
     // Process optional buffer size
     int bufferSize = DEFAULT_BUFFER_SIZE;
 
+    // Check if the first argument is "-b"
     if (argc == 4 && strncmp(argv[1], "-b", 2) == 0) {
         bufferSize = atoi(argv[1] + 2); // Skip the "-b" prefix
         if (bufferSize <= 0) {
