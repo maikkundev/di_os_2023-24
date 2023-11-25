@@ -1,93 +1,90 @@
-Script started on Fri Nov 24 16:45:05 2023
-[1m[7m%[27m[1m[0m                                                                                                                                                                ]2;lost@Thans-Macbook:~/Projects/di_os_2023-24]1;..di_os_2023-24[0m[27m[24m[J
-[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [!][0m[31m[39m[1m[0m[0m[39m[1m [0m
-[1m[0m[1m[32m➜ [0m[32m[39m[1m[0m[K[?1h=[?2004h../.  bbib  bbin b  //i/ /bin/bas h scriptfile[1m [0m[11D          [0m [11Dscrti  ipt.sh[1m [0m[0m [?1l>[?2004l
+Script started on Sat Nov 25 16:18:30 2023
+/[1m[7m%[27m[1m[0m                                                                                                                                                                ]2;lost@Thans-Macbook:~/Projects/di_os_2023-24]1;..di_os_2023-24b[0m[27m[24m[J
+[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [⇡!][0m[31m[39m[1m[0m[0m[39m[1m [0m
+[1m[0m[1m[32m➜ [0m[32m[39m[1m[0m[K[?1h=[?2004h//bin/bash[1m [0m[0m script.sh[1m [0m[0m [?1l>[?2004l
 ]2;/bin/bash script.sh]1;/bin/bash-- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/lost/Projects/di_os_2023-24
-[ 33%] [32mBuilding C object CMakeFiles/di_os_2023_24.dir/erg2/main.c.o[0m
-[ 66%] [32mBuilding C object CMakeFiles/di_os_2023_24.dir/erg2/mycp.c.o[0m
-[100%] [32m[1mLinking C executable out/mycp[0m
 [100%] Built target di_os_2023_24
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.023597 secs (710989363 bytes/sec)
+16777216 bytes transferred in 0.022910 secs (732309734 bytes/sec)
 
-real	0m0.627s
-user	0m0.004s
-sys	0m0.088s
+real	0m0.076s
+user	0m0.002s
+sys	0m0.065s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.028468 secs (589335956 bytes/sec)
+16777216 bytes transferred in 0.022803 secs (735745998 bytes/sec)
 
 real	0m0.174s
 user	0m0.091s
 sys	0m0.065s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.024560 secs (683111401 bytes/sec)
+16777216 bytes transferred in 0.022990 secs (729761462 bytes/sec)
 
-real	0m0.117s
+real	0m0.120s
 user	0m0.047s
+sys	0m0.065s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.023740 secs (706706655 bytes/sec)
+
+real	0m0.096s
+user	0m0.025s
+sys	0m0.065s
+1+0 records in
+1+0 records out
+16777216 bytes transferred in 0.022257 secs (753795031 bytes/sec)
+
+real	0m0.082s
+user	0m0.013s
 sys	0m0.064s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.023687 secs (708287922 bytes/sec)
+16777216 bytes transferred in 0.022577 secs (743110954 bytes/sec)
 
-real	0m0.083s
-user	0m0.026s
-sys	0m0.052s
-1+0 records in
-1+0 records out
-16777216 bytes transferred in 0.022631 secs (741337811 bytes/sec)
-
-real	0m0.070s
-user	0m0.013s
-sys	0m0.052s
-1+0 records in
-1+0 records out
-16777216 bytes transferred in 0.022912 secs (732245810 bytes/sec)
-
-real	0m0.066s
+real	0m0.077s
 user	0m0.007s
-sys	0m0.053s
+sys	0m0.064s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.022764 secs (737006501 bytes/sec)
+16777216 bytes transferred in 0.022793 secs (736068793 bytes/sec)
 
-real	0m0.062s
+real	0m0.075s
 user	0m0.003s
-sys	0m0.053s
+sys	0m0.068s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.022748 secs (737524881 bytes/sec)
+16777216 bytes transferred in 0.023196 secs (723280566 bytes/sec)
 
-real	0m0.062s
+real	0m0.074s
 user	0m0.003s
-sys	0m0.052s
+sys	0m0.065s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.025237 secs (664786464 bytes/sec)
+16777216 bytes transferred in 0.022957 secs (730810472 bytes/sec)
 
-real	0m0.060s
+real	0m0.073s
 user	0m0.002s
-sys	0m0.052s
+sys	0m0.064s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.023018 secs (728873751 bytes/sec)
+16777216 bytes transferred in 0.023458 secs (715202319 bytes/sec)
 
 real	0m0.056s
 user	0m0.001s
-sys	0m0.049s
+sys	0m0.050s
 1+0 records in
 1+0 records out
-16777216 bytes transferred in 0.023500 secs (713924085 bytes/sec)
+16777216 bytes transferred in 0.023479 secs (714562630 bytes/sec)
 
-real	0m0.052s
+real	0m0.060s
 user	0m0.001s
-sys	0m0.048s
+sys	0m0.052s
 [1m[7m%[27m[1m[0m                                                                                                                                                                ]2;lost@Thans-Macbook:~/Projects/di_os_2023-24]1;..di_os_2023-24[0m[27m[24m[J
-[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [!][0m[31m[39m[1m[0m[0m[39m[1m [0m[1mtook [0m[1m[33m2s[0m[33m[39m[1m [0m
+[1m[0m[1m[36mdi_os_2023-24[0m[36m[39m[1m [0m[1mon [0m[1m[37m[1m[37m[0m[37m[1m[37m[35m main[0m[35m[39m[1m[0m[1m[0m[1m[31m [⇡!][0m[31m[39m[1m[0m[0m[39m[1m [0m
 [1m[0m[1m[32m➜ [0m[32m[39m[1m[0m[K[?1h=[?2004heexit[?1l>[?2004l
 ]2;exit]1;exit
-Script done on Fri Nov 24 16:45:31 2023
+Script done on Sat Nov 25 16:18:38 2023
