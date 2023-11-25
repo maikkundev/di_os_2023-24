@@ -1,19 +1,18 @@
-OBJS	= main.o mycp.o
-SOURCE	= erg2/main.c erg2/mycp.c
-HEADER	= erg2/mycp.h
-OUT	= mycp
-CC	= gcc
-FLAGS	= -g -c -Wall
+CC = gcc
+CFLAGS = -Wall -Wextra -Wno-newline-eof -pedantic
 
-all: $(OBJS)
-	$(CC) -g $(OBJS) -o $(OUT)
+SRC_DIR = erg2
+OUT_DIR = out
 
-main.o: erg2/main.c
-	$(CC) $(FLAGS) erg2/main.c 
+all: $(OUT_DIR)/mycp
 
-mycp.o: erg2/mycp.c
-	$(CC) $(FLAGS) erg2/mycp.c 
+$(OUT_DIR)/mycp: $(SRC_DIR)/main.c $(SRC_DIR)/mycp.c | $(OUT_DIR)
+	$(CC) $(CFLAGS) -o $@ $^
 
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
 
 clean:
-	rm -f $(OBJS) $(OUT)
+	rm -rf $(OUT_DIR)
+	rm -rf input output
+	rmdir $(OUT_DIR) 2>/dev/null || true

@@ -1,5 +1,5 @@
 # Build the project
-cmake .
+make clean
 make
 
 # Remove old files
