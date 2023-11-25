@@ -73,5 +73,5 @@ dkms.conf
 /.idea
 /.vscode
 
-# DS_Store
+# OS generated files
 .DS_Store
