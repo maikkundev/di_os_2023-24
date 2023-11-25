@@ -62,16 +62,16 @@ dkms.conf
 /out/
 /build
 /cmake_install.cmake
-/Makefile
+# /Makefile
 
 # Project Specific
 /input
 /output
 /lab
 
-#IDEs
+# IDEs
 /.idea
 /.vscode
 
-# OS generated files
+# DS_Store
 .DS_Store
