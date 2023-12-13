@@ -1,68 +1,94 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 
+#define BUFFER_SIZE 1024
+
 int main(int argc, char *argv[]) {
-    if (argc != 3) {
-        fprintf(stderr, "Usage: %s -n <input_file> (501)\n", argv[0]);
+    FILE *file;
+    int fd[2];
+
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s <filename>\n (501)", argv[0]);
+        
         // Exit with error code 501: Wrong number of arguments
         exit(501);
     }
 
-    // Get file name
-    char *file1 = argv[argc - 2];
+    // Open given file for reading
+    file = fopen(argv[1], "r");
+    if (file == NULL) {
+        perror("Error opening file (502)");
 
-    // Create a pipe
-    int fd[2];
-    pipe(fd);
+        // Exit with error code 502: File open error
+        exit(502);
+    }
 
-    pid_t pid = fork();
+    // Create pipe
+    if (pipe(fd) == -1) {
+        perror("Pipe creation failed (503)");
 
-    if (pid == 0) { // Child process
-        // Close unused read end
-        close(fd[0]);
+        // Exit with error code 503: Pipe creation failed
+        exit(503);
+    }
 
-        // Redirect stdout to the pipe
-        dup2(fd[1], STDOUT_FILENO);
+    // Create child in order to run sort
+    pid_t child_pid = fork();
+    if (child_pid == -1) {
+        perror("Fork failed (505)");
 
-        // Execute cat command
-        execlp("cat", "cat", file1, NULL);
-        perror("Execution failed - could not execute cat command (510)\n");
+        // Exit with error code 505: Fork failed
+        exit(505);
+    }
 
-        // Exit with error code 510: Execution failed - could not execute cat command (510)
-        exit(510);
-    } else if (pid > 0) { // Parent process
-        // Close unused write end
+    if (child_pid == 0) { // Child code
+        // Close pipe's output
         close(fd[1]);
 
-        // Declare a buffer to store each line read from the pipe
-        char line[256];
+        // Connect sort's input to the other end of the pipe
+        dup2(fd[0], STDIN_FILENO);
 
-        // Convert the read end of the pipe to a FILE stream for easier line-by-line reading
-        FILE *stream = fdopen(fd[0], "r");
+        // Close the other end of the pipe
+        close(fd[0]);
 
-        // Read lines from the pipe until there are no more lines
-        while (fgets(line, sizeof(line), stream) != NULL) {
-            // Print each line with a prefix indicating it was received through the pipe
-            printf("Data received through pipe: %s\n", line);
+        // Execute sort
+        execlp("/bin/sh", "sh", "-c", "sort -n | awk '{print \"Data received through pipe \" $0}'", (char *) NULL);
+
+        // In case execution of sort fails
+        perror("Execution failed (510)");
+
+        // Exit with error code 510: Execution failed
+        exit(510);
+    }
+    else { // Parent code
+        // Close the read end of the pipe in the parent process
+        close(fd[0]);
+
+        char buffer[BUFFER_SIZE];
+        ssize_t bytesRead;
+
+        // Read the content of the file and write it to the pipe
+        while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
+            ssize_t written = write(fd[1], buffer, bytesRead);
+            if (written == -1) {
+                perror("Error writing to pipe (511)");
+                // Exit with error code 511: Error writing to pipe
+                exit(511);
+            }
         }
 
-        // Close the FILE stream
-        fclose(stream);
+        // Close the output end of the pipe
+        close(fd[1]);
 
-        // Wait for the child process to finish before the parent process exits
-        // This prevents the child process from becoming a zombie process
+        // Wait for the child to complete
         wait(NULL);
-    } else {
-        // Print an error message indicating that the fork call failed
-        perror("Fork failed (511)\n");
+    }
 
-        // Exit with error code 511: Fork failed
-        exit(511);
-}
+    // Close file
+    fclose(file);
 
-    // Successful exit
-    exit(100);
+    return 0;
 }
