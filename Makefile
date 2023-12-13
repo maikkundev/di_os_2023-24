@@ -1,12 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Wno-newline-eof -pedantic
 
-SRC_DIR = erg2
+SRC_DIR = erg3
 OUT_DIR = out
 
-all: $(OUT_DIR)/mycp
+all: $(OUT_DIR)/sort
 
-$(OUT_DIR)/mycp: $(SRC_DIR)/main.c $(SRC_DIR)/mycp.c | $(OUT_DIR)
+$(OUT_DIR)/sort: $(SRC_DIR)/main.c | $(OUT_DIR)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(OUT_DIR):
