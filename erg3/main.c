@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
 
     if (argc != 2) {
         fprintf(stderr, "Usage: %s <filename>\n (501)", argv[0]);
+        
         // Exit with error code 501: Wrong number of arguments
         exit(501);
     }
@@ -21,6 +22,7 @@ int main(int argc, char *argv[]) {
     file = fopen(argv[1], "r");
     if (file == NULL) {
         perror("Error opening file (502)");
+
         // Exit with error code 502: File open error
         exit(502);
     }
@@ -28,6 +30,7 @@ int main(int argc, char *argv[]) {
     // Create pipe
     if (pipe(fd) == -1) {
         perror("Pipe creation failed (503)");
+
         // Exit with error code 503: Pipe creation failed
         exit(503);
     }
@@ -36,6 +39,7 @@ int main(int argc, char *argv[]) {
     pid_t child_pid = fork();
     if (child_pid == -1) {
         perror("Fork failed (505)");
+
         // Exit with error code 505: Fork failed
         exit(505);
     }
@@ -55,6 +59,7 @@ int main(int argc, char *argv[]) {
 
         // In case execution of sort fails
         perror("Execution failed (510)");
+
         // Exit with error code 510: Execution failed
         exit(510);
     }

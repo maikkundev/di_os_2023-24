@@ -1,11 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -Wextra
-SRC = main.c
+
+SRC_DIR = main.c
 EXEC = helper
 
 all: $(EXEC)
 
-$(EXEC): $(SRC)
+$(EXEC): $(SRC_DIR)
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
