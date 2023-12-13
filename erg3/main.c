@@ -12,28 +12,32 @@ int main(int argc, char *argv[]) {
     int fd[2];
 
     if (argc != 2) {
-        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
-        exit(EXIT_FAILURE);
+        fprintf(stderr, "Usage: %s <filename>\n (501)", argv[0]);
+        // Exit with error code 501: Wrong number of arguments
+        exit(501);
     }
 
     // Open given file for reading
     file = fopen(argv[1], "r");
     if (file == NULL) {
-        perror("Error opening file");
-        exit(EXIT_FAILURE);
+        perror("Error opening file (502)");
+        // Exit with error code 502: File open error
+        exit(502);
     }
 
     // Create pipe
     if (pipe(fd) == -1) {
-        perror("Pipe creation failed");
-        exit(EXIT_FAILURE);
+        perror("Pipe creation failed (503)");
+        // Exit with error code 503: Pipe creation failed
+        exit(503);
     }
 
     // Create child in order to run sort
     pid_t child_pid = fork();
     if (child_pid == -1) {
-        perror("Fork failed");
-        exit(EXIT_FAILURE);
+        perror("Fork failed (505)");
+        // Exit with error code 505: Fork failed
+        exit(505);
     }
 
     if (child_pid == 0) { // Child code
@@ -50,8 +54,9 @@ int main(int argc, char *argv[]) {
         execlp("/bin/sh", "sh", "-c", "sort -n | awk '{print \"Data received through pipe \" $0}'", (char *) NULL);
 
         // In case execution of sort fails
-        perror("Exec failed");
-        exit(EXIT_FAILURE);
+        perror("Execution failed (510)");
+        // Exit with error code 510: Execution failed
+        exit(510);
     }
     else { // Parent code
         // Close the read end of the pipe in the parent process
@@ -64,8 +69,9 @@ int main(int argc, char *argv[]) {
         while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
             ssize_t written = write(fd[1], buffer, bytesRead);
             if (written == -1) {
-                perror("Error writing to pipe");
-                exit(EXIT_FAILURE);
+                perror("Error writing to pipe (511)");
+                // Exit with error code 511: Error writing to pipe
+                exit(511);
             }
         }
 
