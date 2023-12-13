@@ -3,13 +3,10 @@ make clean
 make
 
 # Remove old files
-rm -rf input output out/report.out
+rm -rf erg3/input out/
 
 # Create input to be copied
-dd if=/dev/urandom of=./input bs=16M count=1 iflag=fullblock
-
-# Create output file
-touch output
+touch erg3/input
 
 # Cd into directory and run command
 cd out/

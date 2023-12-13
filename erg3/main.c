@@ -14,6 +14,7 @@ int main(int argc, char *argv[]) {
     // Get file name
     char *file1 = argv[argc - 2];
 
+    // Create a pipe
     int fd[2];
     pipe(fd);
 
