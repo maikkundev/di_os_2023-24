@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     int fd[2];
 
     if (argc != 2) {
-        fprintf(stderr, "Usage: %s <filename>\n (501)", argv[0]);
+        fprintf(stderr, "Usage: %s <inputFile> (501)\n", argv[0]);
         
         // Exit with error code 501: Wrong number of arguments
         exit(501);
@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
         // Exit with error code 505: Fork failed
         exit(505);
     }
-
     if (child_pid == 0) { // Child code
         // Close pipe's output
         close(fd[1]);
