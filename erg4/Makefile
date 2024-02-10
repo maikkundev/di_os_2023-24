@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra
 
 SRC_DIR = main.c
-EXEC = helper
+EXEC = process
 
 all: $(EXEC)
 

@@ -43,8 +43,7 @@ int main(int argc, char *argv[]) {
         // Exit with error code 505: Fork failed
         exit(505);
     }
-    // Child code
-    if (child_pid == 0) {
+    if (child_pid == 0) { // Child code
         // Close pipe's output
         close(fd[1]);
 
@@ -63,8 +62,7 @@ int main(int argc, char *argv[]) {
         // Exit with error code 510: Execution failed
         exit(510);
     }
-    // Parent code
-    else {
+    else { // Parent code
         // Close the read end of the pipe in the parent process
         close(fd[0]);
 
